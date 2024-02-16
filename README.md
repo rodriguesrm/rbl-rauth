@@ -7,10 +7,10 @@ API de Authenticação de Usuário e Aplicações padrão JWT.
 
 ### Requerimentos
 - `MySql Server` 5.7.22 ou superior para que a aplicação crie e utilize seu próprio banco de dados. Consulte https://dev.mysql.com/.
-- `SEQ Server` para a aplicação enviar registros de log. Consulte https://github.com/rodriguesrm/rsoft-logs.
+- `SEQ Server` para a aplicação enviar registros de log. Consulte https://datalust.co/seq.
 
 ### Dependências de pacotes NuGet
-- `Serilog`. Veja em https://serilog.net/.
+- `Serilog`. Consulte em https://serilog.net/.
 
 ### Configurações e Variáveis de Ambientes
 
