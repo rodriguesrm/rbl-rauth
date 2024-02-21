@@ -1,8 +1,7 @@
-﻿using RSoft.Lib.Common.Contracts.Entities;
-using RSoft.Lib.Common.ValueObjects;
-using System;
+﻿using RBlazeLabs.Common.Entities;
+using RBlazeLabs.Common.ValueObjects;
 
-namespace RSoft.Lib.Design.Domain.Entities
+namespace RBlazeLabs.Architecture.Domain.Entities
 {
 
     /// <summary>

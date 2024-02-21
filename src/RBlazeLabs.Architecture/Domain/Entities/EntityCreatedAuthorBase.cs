@@ -1,7 +1,6 @@
 ﻿using RBlazeLabs.Architecture.Domain.Entities;
-using RSoft.Lib.Common.Contracts.Entities;
-using RSoft.Lib.Common.ValueObjects;
-using System;
+using RBlazeLabs.Common.Entities;
+using RBlazeLabs.Common.ValueObjects;
 
 namespace RSoft.Lib.Design.Domain.Entities
 {
@@ -14,6 +13,7 @@ namespace RSoft.Lib.Design.Domain.Entities
         where TEntity : EntityBase<TEntity>
     {
 
+#pragma warning disable CS8618
         #region Constructors
 
         /// <summary>
@@ -22,6 +22,7 @@ namespace RSoft.Lib.Design.Domain.Entities
         public EntityCreatedAuthorBase() : base() { }
 
         #endregion
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
         #region Properties
 

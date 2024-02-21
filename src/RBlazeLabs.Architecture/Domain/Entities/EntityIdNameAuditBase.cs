@@ -1,4 +1,4 @@
-﻿namespace RSoft.Lib.Design.Domain.Entities
+﻿namespace RBlazeLabs.Architecture.Domain.Entities
 {
 
     /// <summary>
@@ -33,7 +33,7 @@
         /// <summary>
         /// Entity name value
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         #endregion
 

@@ -1,6 +1,5 @@
-﻿using RSoft.Lib.Common.Contracts.Entities;
-using RSoft.Lib.Common.ValueObjects;
-using System;
+﻿using RBlazeLabs.Common.Entities;
+using RBlazeLabs.Common.ValueObjects;
 
 namespace RBlazeLabs.Architecture.Domain.Entities
 {
@@ -28,13 +27,13 @@ namespace RBlazeLabs.Architecture.Domain.Entities
         public DateTime CreatedOn { get; set; }
 
         ///<inheritdoc/>
-        public Author CreatedAuthor { get; set; }
+        public Author CreatedAuthor { get; set; } = new(0, string.Empty);
 
         ///<inheritdoc/>
         public DateTime? ChangedOn { get; set; }
 
         ///<inheritdoc/>
-        public AuthorNullable ChangedAuthor { get; set; }
+        public AuthorNullable ChangedAuthor { get; set; } = new(0, string.Empty);
 
         #endregion
 

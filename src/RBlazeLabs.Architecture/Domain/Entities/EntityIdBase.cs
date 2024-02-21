@@ -1,6 +1,4 @@
-﻿using RBlazeLabs.Architecture.Domain.Entities;
-
-namespace RSoft.Lib.Design.Domain.Entities
+﻿namespace RBlazeLabs.Architecture.Domain.Entities
 {
 
     /// <summary>

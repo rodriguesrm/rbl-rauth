@@ -1,4 +1,5 @@
-﻿using Flunt.Notifications;
+﻿using FluentValidator;
+using RBlazeLabs.Common.Entities;
 
 namespace RBlazeLabs.Architecture.Domain.Entities
 {
@@ -7,7 +8,7 @@ namespace RBlazeLabs.Architecture.Domain.Entities
     /// Entity abstract class
     /// </summary>
     /// <typeparam name="TEntity">Entity type</typeparam>
-    public abstract class EntityBase<TEntity> : Notifiable<Notification>, IEntity
+    public abstract class EntityBase<TEntity> : Notifiable, IEntity
         where TEntity : EntityBase<TEntity>
     {
 

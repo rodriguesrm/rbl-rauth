@@ -24,9 +24,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X-ToExportForNuGetPackage",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9-Tests", "9-Tests", "{CAB1D35C-931C-4908-9119-933CF3EDD54C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBlazeLabs.RAuth.Domain", "RBlazeLabs.RAuth.Domain\RBlazeLabs.RAuth.Domain.csproj", "{B15AE5BB-2557-4095-B830-B20C3197942B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RBlazeLabs.RAuth.Domain", "RBlazeLabs.RAuth.Domain\RBlazeLabs.RAuth.Domain.csproj", "{B15AE5BB-2557-4095-B830-B20C3197942B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBlazeLabs.Architecture", "RBlazeLabs.Architecture\RBlazeLabs.Architecture.csproj", "{E8F251A0-7B0A-46BC-AA55-62E242A7362A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RBlazeLabs.Architecture", "RBlazeLabs.Architecture\RBlazeLabs.Architecture.csproj", "{E8F251A0-7B0A-46BC-AA55-62E242A7362A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBlazeLabs.Common", "RBlazeLabs.Common\RBlazeLabs.Common.csproj", "{5BF3E503-72AF-4400-8609-1159D11B3A7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{E8F251A0-7B0A-46BC-AA55-62E242A7362A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8F251A0-7B0A-46BC-AA55-62E242A7362A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8F251A0-7B0A-46BC-AA55-62E242A7362A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF3E503-72AF-4400-8609-1159D11B3A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF3E503-72AF-4400-8609-1159D11B3A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF3E503-72AF-4400-8609-1159D11B3A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF3E503-72AF-4400-8609-1159D11B3A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B15AE5BB-2557-4095-B830-B20C3197942B} = {0CD4B417-2A5E-4873-A9E6-DAB9CB226880}
 		{E8F251A0-7B0A-46BC-AA55-62E242A7362A} = {75522A18-C4D5-4164-897B-BA49FC87F4C9}
+		{5BF3E503-72AF-4400-8609-1159D11B3A7E} = {75522A18-C4D5-4164-897B-BA49FC87F4C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24AF8528-6E9D-47EC-906F-7A0004C675B4}

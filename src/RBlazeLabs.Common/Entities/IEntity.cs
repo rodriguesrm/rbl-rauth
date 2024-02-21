@@ -1,4 +1,4 @@
-﻿namespace RBlazeLabs.Architecture.Domain.Entities
+﻿namespace RBlazeLabs.Common.Entities
 {
 
     /// <summary>

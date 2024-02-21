@@ -13,11 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flunt" Version="2.0.5" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RBlazeLabs.Architecture\RBlazeLabs.Architecture.csproj" />
+    <ProjectReference Include="..\RBlazeLabs.Common\RBlazeLabs.Common.csproj" />
   </ItemGroup>
 
 </Project>
