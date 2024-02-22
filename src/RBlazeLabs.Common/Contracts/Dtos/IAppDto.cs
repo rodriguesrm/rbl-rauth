@@ -1,4 +1,4 @@
-﻿namespace RBlazeLabs.Common.Dtos
+﻿namespace RBlazeLabs.Common.Contracts.Dtos
 {
 
     /// <summary>

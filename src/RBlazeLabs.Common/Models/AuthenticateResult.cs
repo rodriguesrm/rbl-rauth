@@ -10,7 +10,8 @@
     /// <param name="success">Indicates whether the operation was successful</param>
     /// <param name="user">Dto da pessoa autenticada ou null se falhou a autenticação</param>
     /// <param name="errors">Dictionary with list of errors/validation reviews</param>
-    public class AuthenticateResult<TUserDto>(bool success, TUserDto user, IDictionary<string, string> errors) : SimpleOperationResult(success, errors)
+    public class AuthenticateResult<TUserDto>(bool success, TUserDto user, IDictionary<string, string> errors) 
+        : SimpleOperationResult(success, errors)
         where TUserDto : class
     {
 

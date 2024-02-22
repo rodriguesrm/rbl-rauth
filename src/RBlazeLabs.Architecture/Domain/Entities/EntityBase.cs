@@ -1,5 +1,5 @@
 ﻿using FluentValidator;
-using RBlazeLabs.Common.Entities;
+using RBlazeLabs.Common.Contracts.Entities;
 
 namespace RBlazeLabs.Architecture.Domain.Entities
 {

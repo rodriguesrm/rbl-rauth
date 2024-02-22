@@ -4,9 +4,6 @@
     /// <summary>
     /// Creating and changing data author data structure
     /// </summary>
-    /// <remarks>
-    /// Create a new object instance
-    /// </remarks>
     /// <param name="date">Occurrence date</param>
     /// <param name="id">Author id key value</param>
     /// <param name="name">Author full name</param>

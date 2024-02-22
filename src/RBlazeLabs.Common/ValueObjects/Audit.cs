@@ -1,9 +1,8 @@
 ﻿using RBlazeLabs.Common.Abstractions;
-using RBlazeLabs.Common.Entities;
+using RBlazeLabs.Common.Contracts.Entities;
 using RBlazeLabs.Common.Resources;
-using RBlazeLabs.Common.ValueObjects;
 
-namespace RSoft.Lib.Common.ValueObjects
+namespace RBlazeLabs.Common.ValueObjects
 {
 
     /// <summary>
@@ -56,9 +55,9 @@ namespace RSoft.Lib.Common.ValueObjects
         {
             if (CreatedAuthor == null)
                 AddNotification(
-                    nameof(CreatedAuthor), 
+                    nameof(CreatedAuthor),
                     ServiceActivator.GetStringInLocalizer<SharedLanguageResource>(
-                        "CREATED_AUTHOR_REQUIRED", "{0} is required", 
+                        "CREATED_AUTHOR_REQUIRED", "{0} is required",
                         nameof(CreatedAuthor)
                     )
                 );

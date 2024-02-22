@@ -13,4 +13,8 @@
     <PackageReference Include="RSoft.Helpers" Version="1.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Web\Api\" />
+  </ItemGroup>
+
 </Project>

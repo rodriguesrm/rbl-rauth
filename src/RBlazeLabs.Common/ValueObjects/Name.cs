@@ -1,4 +1,4 @@
-﻿using RBlazeLabs.Common.Entities;
+﻿using RBlazeLabs.Common.Contracts.Entities;
 using RBlazeLabs.Common.Validations.Constracts;
 
 namespace RBlazeLabs.Common.ValueObjects

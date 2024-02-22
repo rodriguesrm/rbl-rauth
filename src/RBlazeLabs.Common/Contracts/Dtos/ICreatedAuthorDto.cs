@@ -1,6 +1,6 @@
 ﻿using RBlazeLabs.Common.Models;
 
-namespace RSoft.Lib.Common.Contracts.Dtos
+namespace RBlazeLabs.Common.Contracts.Dtos
 {
 
     /// <summary>

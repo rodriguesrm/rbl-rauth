@@ -1,5 +1,5 @@
 ﻿using RBlazeLabs.Common.Abstractions;
-using RBlazeLabs.Common.Entities;
+using RBlazeLabs.Common.Contracts.Entities;
 using RBlazeLabs.Common.Resources;
 
 namespace RBlazeLabs.Common.ValueObjects

@@ -1,6 +1,6 @@
 ﻿using RBlazeLabs.Common.ValueObjects;
 
-namespace RBlazeLabs.Common.Entities
+namespace RBlazeLabs.Common.Contracts.Entities
 {
 
     /// <summary>

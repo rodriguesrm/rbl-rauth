@@ -1,6 +1,6 @@
 ﻿using RBlazeLabs.Common.Models;
 
-namespace RBlazeLabs.Common.Dtos
+namespace RBlazeLabs.Common.Contracts.Dtos
 {
 
     /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace RBlazeLabs.Common.Web
+﻿namespace RBlazeLabs.Common.Contracts.Web
 {
 
     /// <summary>
