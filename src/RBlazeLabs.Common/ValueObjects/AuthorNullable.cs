@@ -1,4 +1,4 @@
-﻿using RBlazeLabs.Common.Validations.Constracts;
+﻿using RBlazeLabs.Common.Validators;
 
 namespace RBlazeLabs.Common.ValueObjects
 {
@@ -43,9 +43,11 @@ namespace RBlazeLabs.Common.ValueObjects
 
         ///<inheritdoc/>
         protected override void Validate()
-        {
-            AddNotifications(new SimpleStringValidationContract(Name, nameof(Name), false, 2, 150).Contract.Notifications);
-        }
+            => this.ValidateModel
+            (
+                Name ?? string.Empty, 
+                () => new SimpleStringValidator(nameof(Name), false, 2, 150)
+            );
 
         #endregion
 

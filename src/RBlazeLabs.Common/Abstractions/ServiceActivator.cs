@@ -22,8 +22,8 @@ namespace RBlazeLabs.Common.Abstractions
         /// Get text int string-localizer
         /// </summary>
         /// <typeparam name="T">The System.Type to provide strings for</typeparam>
-        /// <param name="textToLocalizer"></param>
-        /// <param name="defaultText"></param>
+        /// <param name="textToLocalizer">Text do localizer</param>
+        /// <param name="defaultText">Default text when not found in localizer</param>
         /// <returns>String founded or default text is not found or provider is not avaliable</returns>
         internal static string GetStringInLocalizer<T>
         (
@@ -35,8 +35,8 @@ namespace RBlazeLabs.Common.Abstractions
         /// Get text int string-localizer
         /// </summary>
         /// <typeparam name="T">The System.Type to provide strings for</typeparam>
-        /// <param name="textToLocalizer"></param>
-        /// <param name="defaultText"></param>
+        /// <param name="textToLocalizer">Text do localizer</param>
+        /// <param name="defaultText">Default text when not found in localizer</param>
         /// <param name="replaceArgs">An object array that contains zero or more objects to format.</param>
         /// <returns>String founded or default text is not found or provider is not avaliable</returns>
         internal static string GetStringInLocalizer<T>
@@ -50,8 +50,8 @@ namespace RBlazeLabs.Common.Abstractions
         /// Get text int string-localizer
         /// </summary>
         /// <typeparam name="T">The System.Type to provide strings for</typeparam>
-        /// <param name="textToLocalizer"></param>
-        /// <param name="defaultText"></param>
+        /// <param name="textToLocalizer">Text do localizer</param>
+        /// <param name="defaultText">Default text when not found in localizer</param>
         /// <param name="serviceProvider">Service DI provider</param>
         /// <returns>String founded or default text is not found or provider is not avaliable</returns>
         internal static string GetStringInLocalizer<T>
@@ -65,8 +65,8 @@ namespace RBlazeLabs.Common.Abstractions
         /// Get text int string-localizer
         /// </summary>
         /// <typeparam name="T">The System.Type to provide strings for</typeparam>
-        /// <param name="textToLocalizer"></param>
-        /// <param name="defaultText"></param>
+        /// <param name="textToLocalizer">Text do localizer</param>
+        /// <param name="defaultText">Default text when not found in localizer</param>
         /// <param name="serviceProvider">Service DI provider</param>
         /// <param name="replaceArgs">An object array that contains zero or more objects to format.</param>
         /// <returns>String founded or default text is not found or provider is not avaliable</returns>

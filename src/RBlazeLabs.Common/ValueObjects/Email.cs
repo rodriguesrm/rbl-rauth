@@ -1,4 +1,4 @@
-﻿using RBlazeLabs.Common.Validations.Constracts;
+﻿using RBlazeLabs.Common.Validators;
 
 namespace RBlazeLabs.Common.ValueObjects
 {
@@ -60,9 +60,7 @@ namespace RBlazeLabs.Common.ValueObjects
 
         ///<inheritdoc/>
         protected override void Validate()
-        {
-            AddNotifications(new EmailValidationContract(Address, _required).Contract.Notifications);
-        }
+            => this.ValidateModel<Email, EmailValidator>(this);
 
         #endregion
 

@@ -123,6 +123,9 @@
   <data name="DATA_NOT_FOUND" xml:space="preserve">
     <value>Dados não encontrados</value>
   </data>
+  <data name="ID_INVALID" xml:space="preserve">
+    <value>O id informado é inválido (deve ser um número inteiro positivo)</value>
+  </data>
   <data name="ID_REQUIRED" xml:space="preserve">
     <value>A chave de identificação (Id) deve ser informada</value>
   </data>

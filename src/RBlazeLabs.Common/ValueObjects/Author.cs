@@ -1,6 +1,6 @@
 ﻿using RBlazeLabs.Common.Abstractions;
 using RBlazeLabs.Common.Resources;
-using RBlazeLabs.Common.Validations.Constracts;
+using RBlazeLabs.Common.Validators;
 
 namespace RBlazeLabs.Common.ValueObjects
 {
@@ -46,11 +46,15 @@ namespace RBlazeLabs.Common.ValueObjects
         ///<inheritdoc/>
         protected override void Validate()
         {
-            AddNotifications(new RequiredValidationContract<int>(Id, nameof(Id), 
-                ServiceActivator.GetStringInLocalizer<SharedLanguageResource>(
-                    "ID_REQUIRED", "Id is required")).Contract.Notifications);
-            AddNotifications(new SimpleStringValidationContract(Name, nameof(Name), true, 2, 150)
-                .Contract.Notifications);
+            if (Id <= 0)
+
+                AddNotification(
+                    nameof(Id),
+                    ServiceActivator.GetStringInLocalizer<SharedLanguageResource>("ID_INVALID", "Id is invalid")
+                );
+
+            this.ValidateModel<string, SimpleStringValidator>(Name);
+
         }
 
         #endregion

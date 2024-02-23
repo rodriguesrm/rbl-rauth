@@ -1,10 +1,10 @@
-﻿namespace RBlazeLabs.Common.Validations.Constracts
+﻿namespace RBlazeLabs.Common.Validators
 {
 
     /// <summary>
     /// Full name validation arguments
     /// </summary>
-    public class FullNameValidationArgument
+    public class FullNameValidatorArgs
     {
 
         #region Properties

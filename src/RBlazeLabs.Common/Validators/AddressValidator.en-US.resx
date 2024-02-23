@@ -117,7 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="EMAIL_INVALID" xml:space="preserve">
-    <value>E-mail inválido</value>
+  <data name="ADDRESS_NUMBER_MAX_SIZE" xml:space="preserve">
+    <value>Address number must contain a maximum of 20 characters</value>
+  </data>
+  <data name="ADDRESS_NUMBER_REQUIRED" xml:space="preserve">
+    <value>Address number is required</value>
+  </data>
+  <data name="CITY_MAX_SIZE" xml:space="preserve">
+    <value>City must contain a maximum of 80 characters</value>
+  </data>
+  <data name="CITY_MIN_SIZE" xml:space="preserve">
+    <value>City must contain at least 2 characters</value>
+  </data>
+  <data name="CITY_REQUIRED" xml:space="preserve">
+    <value>City is required</value>
+  </data>
+  <data name="DISTRICT_MAX_SIZE" xml:space="preserve">
+    <value>District/Neighborhood must contain a maximum of 50 characters</value>
+  </data>
+  <data name="DISTRICT_MIN_SIZE" xml:space="preserve">
+    <value>District/Neighborhood must contain at least 2 characters</value>
+  </data>
+  <data name="DISTRICT_REQUIRED" xml:space="preserve">
+    <value>District/Neighborhood is required</value>
+  </data>
+  <data name="SECONDARY_ADDRESS_MAX_SIZE" xml:space="preserve">
+    <value>Secondary address must contain a maximum of 40 characters</value>
+  </data>
+  <data name="STATE_REQUIRED" xml:space="preserve">
+    <value>State is required</value>
+  </data>
+  <data name="STATE_SIZE" xml:space="preserve">
+    <value>State must contain exactly 2 positions</value>
+  </data>
+  <data name="STREET_NAME_MAX_SIZE" xml:space="preserve">
+    <value>Street name must contain a maximum of 80 characters</value>
+  </data>
+  <data name="STREET_NAME_MIN_SIZE" xml:space="preserve">
+    <value>Street name must contain at least 2 characters</value>
+  </data>
+  <data name="STREET_NAME_REQUIRED" xml:space="preserve">
+    <value>Street name is required</value>
+  </data>
+  <data name="ZIP_CODE_ONLY_NUMBERS" xml:space="preserve">
+    <value>Zip code is in an invalid format (enter numbers only)</value>
+  </data>
+  <data name="ZIP_CODE_REQUIRED" xml:space="preserve">
+    <value>Zip code is required</value>
+  </data>
+  <data name="ZIP_COD_SIZE" xml:space="preserve">
+    <value>The zip code must contain exactly 8 positions</value>
   </data>
 </root>

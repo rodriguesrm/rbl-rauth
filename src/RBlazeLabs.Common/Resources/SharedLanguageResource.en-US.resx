@@ -123,6 +123,9 @@
   <data name="DATA_NOT_FOUND" xml:space="preserve">
     <value>Data not found</value>
   </data>
+  <data name="ID_INVALID" xml:space="preserve">
+    <value>Invalid id value, only integer number and greater than zero!</value>
+  </data>
   <data name="ID_REQUIRED" xml:space="preserve">
     <value>Id is required</value>
   </data>

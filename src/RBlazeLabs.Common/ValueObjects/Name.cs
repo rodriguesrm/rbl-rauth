@@ -1,5 +1,5 @@
 ﻿using RBlazeLabs.Common.Contracts.Entities;
-using RBlazeLabs.Common.Validations.Constracts;
+using RBlazeLabs.Common.Validators;
 
 namespace RBlazeLabs.Common.ValueObjects
 {
@@ -45,9 +45,7 @@ namespace RBlazeLabs.Common.ValueObjects
 
         ///<inheritdoc/>
         protected override void Validate()
-        {
-            AddNotifications(new FullNameValidationContract(this).Contract.Notifications);
-        }
+            => this.ValidateModel<IFullName, FullNameValidator>(this);
 
         #endregion
 

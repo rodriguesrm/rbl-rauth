@@ -117,55 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ADDRESS_NUMBER_MAX_SIZE" xml:space="preserve">
-    <value>O número do endereço deve conter no máximo 20 caracteres</value>
-  </data>
-  <data name="ADDRESS_NUMBER_REQUIRED" xml:space="preserve">
-    <value>O número do endereço deve ser informado</value>
-  </data>
-  <data name="CITY_MAX_SIZE" xml:space="preserve">
-    <value>A cidade deve conter no máximo 80 caracteres</value>
-  </data>
-  <data name="CITY_MIN_SIZE" xml:space="preserve">
-    <value>A cidade deve conter no mínimo 2 caracteres</value>
-  </data>
-  <data name="CITY_REQUIRED" xml:space="preserve">
-    <value>A cidade deve ser informada</value>
-  </data>
-  <data name="NEIGHBORHOOD_MAX_SIZE" xml:space="preserve">
-    <value>O bairro deve conter no máximo 50 caracteres</value>
-  </data>
-  <data name="NEIGHBORHOOD_MIN_SIZE" xml:space="preserve">
-    <value>O bairro deve conter no mínimo 2 caracteres</value>
-  </data>
-  <data name="NEIGHBORHOOD_REQUIRED" xml:space="preserve">
-    <value>O bairro deve ser informado</value>
-  </data>
-  <data name="SECONDARY_ADDRESS_MAX_SIZE" xml:space="preserve">
-    <value>O complemento do endereço deve conter no máximo 40 caracteres</value>
-  </data>
-  <data name="STATE_REQUIRED" xml:space="preserve">
-    <value>A uf (estado) deve ser informada</value>
-  </data>
-  <data name="STATE_SIZE" xml:space="preserve">
-    <value>A uf (estado) deve conter exatamente 2 caracteres</value>
-  </data>
-  <data name="STREET_NAME_MAX_SIZE" xml:space="preserve">
-    <value>O logradouro deve conter no máximo 80 caracteres</value>
-  </data>
-  <data name="STREET_NAME_MIN_SIZE" xml:space="preserve">
-    <value>O logradouro deve conter no mínimo 2 caracteres</value>
-  </data>
-  <data name="STREET_NAME_REQUIRED" xml:space="preserve">
-    <value>O logradouro deve ser informado</value>
-  </data>
-  <data name="ZIP_CODE_ONLY_NUMBERS" xml:space="preserve">
-    <value>O cep informado é inválido (deve conter apenas números)</value>
-  </data>
-  <data name="ZIP_CODE_REQUIRED" xml:space="preserve">
-    <value>O cep deve ser informado</value>
-  </data>
-  <data name="ZIP_COD_SIZE" xml:space="preserve">
-    <value>O cep deve conter 8 dígitos</value>
+  <data name="FUTURE_INVALID_DATE" xml:space="preserve">
+    <value>A data informada em '{0}' deve ser maior que a data atual</value>
   </data>
 </root>

@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DOCUMENT_INVALID" xml:space="preserve">
-    <value>CPF inválido</value>
+    <value>Invalid {0}</value>
   </data>
   <data name="DOCUMENT_REQUIRED" xml:space="preserve">
-    <value>O CPF deve ser informado</value>
+    <value>{0} is required</value>
   </data>
 </root>
