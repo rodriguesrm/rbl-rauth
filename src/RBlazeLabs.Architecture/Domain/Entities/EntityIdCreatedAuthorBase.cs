@@ -8,7 +8,7 @@ namespace RBlazeLabs.Architecture.Domain.Entities
     /// Abstract entity class with id column
     /// </summary>
     /// <typeparam name="TEntity">Entity type</typeparam>
-    public abstract class EntityIdCreatedAuthorBase<TEntity> : EntityIdBase<TEntity>, ICreatedAuthor
+    public abstract class EntityIdCreatedAuthorBase<TEntity> : EntityIdBase<TEntity>, ICreatedAuthorData
         where TEntity : EntityIdCreatedAuthorBase<TEntity>
     {
 

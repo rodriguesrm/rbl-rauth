@@ -6,7 +6,7 @@ namespace RBlazeLabs.Common.Contracts.Entities
     /// <summary>
     /// Created author interface
     /// </summary>
-    public interface ICreatedAuthor
+    public interface ICreatedAuthorData
     {
 
         /// <summary>

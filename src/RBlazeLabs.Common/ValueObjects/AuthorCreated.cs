@@ -8,7 +8,7 @@ namespace RBlazeLabs.Common.ValueObjects
     /// <summary>
     /// Audit value object model
     /// </summary>
-    public class AuthorCreated<TKey> : BaseVO, ICreatedAuthor
+    public class AuthorCreated<TKey> : BaseVO, ICreatedAuthorData
     {
 
 

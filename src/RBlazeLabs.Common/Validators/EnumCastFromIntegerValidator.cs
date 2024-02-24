@@ -28,7 +28,7 @@ namespace RBlazeLabs.Common.Validators
                     "INVALID_MESSAGE", MD.INVALID_MESSAGE, fieldName);
 
             RuleFor(e => e)
-                .NotEmpty().WithMessage(requiredMessage)
+                .NotEmpty().When(e => isRequired).WithMessage(requiredMessage)
                 .Custom((e, c) =>
                 {
                     if (e != null && !Enum.IsDefined(typeof(TEnum), e.GetType()))

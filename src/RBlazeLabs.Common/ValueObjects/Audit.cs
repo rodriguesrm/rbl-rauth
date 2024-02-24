@@ -1,6 +1,6 @@
-﻿using RBlazeLabs.Common.Abstractions;
-using RBlazeLabs.Common.Contracts.Entities;
+﻿using RBlazeLabs.Common.Contracts.Entities;
 using RBlazeLabs.Common.Resources;
+using RBlazeLabs.Common.Validators;
 
 namespace RBlazeLabs.Common.ValueObjects
 {
@@ -8,7 +8,7 @@ namespace RBlazeLabs.Common.ValueObjects
     /// <summary>
     /// Audit value object model
     /// </summary>
-    public class Audit<TKey> : BaseVO, IAuditAuthor
+    public class Audit : BaseVO, IAuditAuthor
     {
 
 
@@ -56,11 +56,13 @@ namespace RBlazeLabs.Common.ValueObjects
             if (CreatedAuthor == null)
                 AddNotification(
                     nameof(CreatedAuthor),
-                    ServiceActivator.GetStringInLocalizer<SharedLanguageResource>(
-                        "CREATED_AUTHOR_REQUIRED", "{0} is required",
+                    this.GetMessage<SharedLanguageResource>
+                    (
+                        "CREATED_AUTHOR_REQUIRED", 
+                        "{0} is required", 
                         nameof(CreatedAuthor)
                     )
-                );
+                ); ;
             if (CreatedAuthor != null) AddNotifications(CreatedAuthor.Notifications);
             if (ChangedAuthor != null) AddNotifications(ChangedAuthor.Notifications);
         }
