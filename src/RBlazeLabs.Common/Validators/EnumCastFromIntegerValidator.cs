@@ -31,7 +31,7 @@ namespace RBlazeLabs.Common.Validators
                 .NotEmpty().WithMessage(requiredMessage)
                 .Custom((e, c) =>
                 {
-                    if (!Enum.IsDefined(typeof(TEnum), e.GetType()))
+                    if (e != null && !Enum.IsDefined(typeof(TEnum), e.GetType()))
                         c.AddFailure(fieldName, invalidMessage);
                 }).When(e => e.HasValue)
             ;

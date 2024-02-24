@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using FluentValidator;
 using RBlazeLabs.Common.Abstractions;
+using RBlazeLabs.Common.Notifications;
 
 namespace RBlazeLabs.Common.Validators
 {

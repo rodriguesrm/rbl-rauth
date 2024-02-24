@@ -1,4 +1,4 @@
-﻿using FluentValidator;
+﻿using RBlazeLabs.Common.Notifications;
 
 namespace RBlazeLabs.Common.ValueObjects
 {

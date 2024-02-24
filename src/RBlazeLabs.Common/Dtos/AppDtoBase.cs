@@ -1,5 +1,5 @@
-﻿using FluentValidator;
-using RBlazeLabs.Common.Contracts.Dtos;
+﻿using RBlazeLabs.Common.Contracts.Dtos;
+using RBlazeLabs.Common.Notifications;
 
 namespace RBlazeLabs.Common.Dtos
 {

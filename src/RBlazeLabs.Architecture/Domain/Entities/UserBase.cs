@@ -48,8 +48,6 @@ namespace RBlazeLabs.Architecture.Domain.Entities
         /// </summary>
         public override void Validate()
         {
-            //UNDONE: Uncoment this line
-            // Name.Validate();
             AddNotifications(Name.Notifications);
         }
 

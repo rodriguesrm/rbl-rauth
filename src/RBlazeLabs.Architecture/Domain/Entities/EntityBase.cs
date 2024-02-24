@@ -1,4 +1,4 @@
-﻿using FluentValidator;
+﻿using RBlazeLabs.Common.Notifications;
 using RBlazeLabs.Common.Contracts.Entities;
 
 namespace RBlazeLabs.Architecture.Domain.Entities
