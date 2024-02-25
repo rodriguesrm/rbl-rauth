@@ -81,26 +81,28 @@ namespace RBlazeLabs.Common.Abstractions
 
             IServiceProvider? provider = serviceProvider ?? _serviceProvider;
 
-            if (provider == null)
-                return defaultText;
-
-            IStringLocalizer<T>? localizer = GetScope()?.ServiceProvider.GetService<IStringLocalizer<T>>();
-            if (localizer == null)
-                return defaultText;
-            LocalizedString localizeResult = localizer[textToLocalizer];
-
-            if (localizeResult.ResourceNotFound)
-                return defaultText;
-
-            string result = localizeResult.Value;
-            if (replaceArgs?.Length > 0)
+            if (provider is not null)
             {
-                try { result = string.Format(result, replaceArgs); }
-                catch (FormatException) { result = defaultText; }
-                catch { throw; }
+                IStringLocalizer<T>? localizer = GetScope()?.ServiceProvider.GetService<IStringLocalizer<T>>();
+                if (localizer is null)
+                    return defaultText;
+                LocalizedString localizeResult = localizer[textToLocalizer];
+
+                if (localizeResult.ResourceNotFound)
+                    return defaultText;
+
+                string result = localizeResult.Value;
+                if (replaceArgs?.Length > 0)
+                {
+                    try { result = string.Format(result, replaceArgs); }
+                    catch (FormatException) { result = defaultText; }
+                    catch { throw; }
+                }
+
+                return result;
             }
 
-            return result;
+            return defaultText;
 
         }
 

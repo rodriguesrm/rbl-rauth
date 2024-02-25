@@ -43,7 +43,7 @@ namespace RBlazeLabs.Common.ValueObjects
         ///<inheritdoc/>
         protected override void Validate()
         {
-            if (CreatedAuthor == null)
+            if (CreatedAuthor is null)
                 AddNotification
                 (
                     nameof(CreatedAuthor), 
@@ -51,7 +51,7 @@ namespace RBlazeLabs.Common.ValueObjects
                         ("CREATED_AUTHOR_REQUIRED", "{0} is required", 
                     nameof(CreatedAuthor))
                 );
-            if (CreatedAuthor != null) AddNotifications(CreatedAuthor.Notifications);
+            if (CreatedAuthor is not null) AddNotifications(CreatedAuthor.Notifications);
         }
 
         #endregion

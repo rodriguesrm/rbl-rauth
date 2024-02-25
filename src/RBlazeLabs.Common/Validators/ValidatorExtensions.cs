@@ -47,7 +47,7 @@ namespace RBlazeLabs.Common.Validators
             where TValidator : IValidator<TModel>
         {
 
-            TValidator validator = constructor == null
+            TValidator validator = constructor is null
                 ? Activator.CreateInstance<TValidator>()
                 : constructor.Invoke();
 

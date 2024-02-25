@@ -53,7 +53,7 @@ namespace RBlazeLabs.Common.ValueObjects
         ///<inheritdoc/>
         protected override void Validate()
         {
-            if (CreatedAuthor == null)
+            if (CreatedAuthor is null)
                 AddNotification(
                     nameof(CreatedAuthor),
                     this.GetMessage<SharedLanguageResource>
@@ -63,8 +63,8 @@ namespace RBlazeLabs.Common.ValueObjects
                         nameof(CreatedAuthor)
                     )
                 ); ;
-            if (CreatedAuthor != null) AddNotifications(CreatedAuthor.Notifications);
-            if (ChangedAuthor != null) AddNotifications(ChangedAuthor.Notifications);
+            if (CreatedAuthor is not null) AddNotifications(CreatedAuthor.Notifications);
+            if (ChangedAuthor is not null) AddNotifications(ChangedAuthor.Notifications);
         }
 
         #endregion

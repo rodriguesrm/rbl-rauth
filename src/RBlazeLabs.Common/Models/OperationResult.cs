@@ -1,28 +1,85 @@
-﻿namespace RBlazeLabs.Common.Models
+﻿using RBlazeLabs.Common.Notifications;
+
+namespace RBlazeLabs.Common.Models
 {
 
     /// <summary>
-    /// Base result model
+    /// Oeration model result
     /// </summary>
-    /// <typeparam name="TObject">Type object result data</typeparam>
     public class OperationResult<TObject>
-        where TObject : class
     {
 
-        /// <summary>
-        /// Indicates whether the operation was performed successfully
-        /// </summary>
-        public bool Sucess { get; set; }
+        #region Constructors
 
         /// <summary>
-        /// Message produced with the result of the operation
+        /// Create a new <see cref=OperationResult"/> sucess instance
         /// </summary>
-        public string? Message { get; set; }
+        /// <param name="result">Object result instance/value</param>
+        public OperationResult(TObject result) 
+            => Result = result;
 
         /// <summary>
-        /// Data obtained from the result of the operation
+        /// Create a new <see cref=OperationResult"/> fail instance
         /// </summary>
-        public TObject? Result { get; set; }
+        /// <param name="notifications">Notification error list</param>
+        public OperationResult(IEnumerable<Notification> notifications) 
+            => Notifications = notifications;
+
+        /// <summary>
+        /// Create a new <see cref=OperationResult"/> exception instance
+        /// </summary>
+        /// <param name="ex">Exception thrown</param>
+        public OperationResult(Exception ex)
+            => Exception = ex;
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Indicates whether the operation was successful
+        /// </summary>
+        public bool Success => !Notifications.Any();
+
+        /// <summary>
+        /// Object Data result obtained from operation
+        /// </summary>
+        public TObject? Result { get; private set; }
+
+        /// <summary>
+        /// List of errors/validation reviews
+        /// </summary>
+        public IEnumerable<Notification> Notifications { get; private set; } = Enumerable.Empty<Notification>();
+
+        /// <summary>
+        /// Exception thrown when operation was executed
+        /// </summary>
+        public Exception? Exception { get; private set; }
+
+        /// <summary>
+        /// Returns notification messages or thrown exception message
+        /// </summary>
+        public string SimpleErrorMessage
+        {
+            get
+            {
+
+                string result = "";
+
+                if (!Success)
+                {
+                    if (Notifications.Any())
+                        result = string.Join("|", Notifications.Select(s => $"{s.Key}-{s.Message}"));
+                    else if (Exception is not null)
+                        result = Exception.GetBaseException().Message;
+                }
+
+                return result;
+
+            }
+        }
+
+        #endregion
 
     }
 
