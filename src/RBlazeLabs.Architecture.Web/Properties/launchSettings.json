@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "RBlazeLabs.Architecture.Web": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58344;http://localhost:58345"
+    }
+  }
+}

@@ -17,7 +17,7 @@ namespace RBlazeLabs.Architecture.Domain.Services
     /// <param name="authenticatedUser">Authenticated user</param>
     public abstract class DomainServiceBase<TEntity, TRepository>
     (
-        TRepository repository, 
+        TRepository repository,
         IAuthenticatedUser authenticatedUser
     ) : IDomainServiceBase<TEntity>
         where TEntity : EntityBase<TEntity>

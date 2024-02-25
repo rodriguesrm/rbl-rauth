@@ -14,7 +14,7 @@
         /// <summary>
         /// Default language culture
         /// </summary>
-        public string? DefaultLanguage { get; set; }
+        public string DefaultLanguage { get; set; } = string.Empty;
 
     }
 

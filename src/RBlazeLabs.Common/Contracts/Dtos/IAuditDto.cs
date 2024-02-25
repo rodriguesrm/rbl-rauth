@@ -6,9 +6,7 @@ namespace RBlazeLabs.Common.Contracts.Dtos
     /// <summary>
     /// Audit Dto interface
     /// </summary>
-    /// <typeparam name="TKey"></typeparam>
-    public interface IAuditDto<TKey>
-        where TKey : struct
+    public interface IAuditDto
     {
 
         /// <summary>
@@ -19,7 +17,7 @@ namespace RBlazeLabs.Common.Contracts.Dtos
         /// <summary>
         /// Changed author data
         /// </summary>
-        AuditAuthor ChangedBy { get; set; }
+        AuditAuthor? ChangedBy { get; set; }
 
     }
 
