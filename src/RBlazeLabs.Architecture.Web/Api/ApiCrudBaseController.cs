@@ -3,7 +3,6 @@ using RBlazeLabs.Architecture.Web.Resources;
 using RBlazeLabs.Common.Abstractions;
 using RBlazeLabs.Common.Dtos;
 using RBlazeLabs.Common.Notifications;
-using RSoft.Lib.Common.Web.Api;
 
 namespace RBlazeLabs.Architecture.Web.Api
 {

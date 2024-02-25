@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using RBlazeLabs.Common.Notifications;
 
-namespace RSoft.Lib.Common.Web.Api
+namespace RBlazeLabs.Architecture.Web.Api
 {
 
     /// <summary>

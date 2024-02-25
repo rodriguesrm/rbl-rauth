@@ -1,8 +1,7 @@
-﻿using RBlazeLabs.Architecture.Web.Models.Responses;
-using RBlazeLabs.Common.Contracts.Dtos;
+﻿using RBlazeLabs.Common.Contracts.Dtos;
 using RBlazeLabs.Common.Models;
 
-namespace RSoft.Lib.Common.Web.Models.Response
+namespace RBlazeLabs.Architecture.Web.Models.Responses
 {
 
     /// <summary>
