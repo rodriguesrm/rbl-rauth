@@ -10,7 +10,7 @@ namespace RBlazeLabs.Architecture.Application.Handlers
     /// List category command handler
     /// </summary>
     /// <param name="logger">Logger object</param>
-    public abstract class ListCommandHandlerBase<TListCommand, TDto, TEntity>(ILogger logger)
+    public abstract class ListCommandQueryBase<TListCommand, TDto, TEntity>(ILogger logger)
         where TListCommand : IRequest<OperationResult<IEnumerable<TDto>>>
         where TEntity : EntityBase<TEntity>
     {

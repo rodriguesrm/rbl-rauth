@@ -14,7 +14,7 @@ namespace RBlazeLabs.Architecture.Application.Handlers
     /// Get entity by id command handler abstract base
     /// </summary>
     /// <param name="logger">Logger object</param>
-    public abstract class GetByKeyCommandHandlerBase<TGetCommand, TResult, TEntity>(ILogger logger)
+    public abstract class GetByKeyQueryHandlerBase<TGetCommand, TResult, TEntity>(ILogger logger)
         where TGetCommand : IRequest<OperationResult<TResult>>
         where TEntity : EntityBase<TEntity>
     {
