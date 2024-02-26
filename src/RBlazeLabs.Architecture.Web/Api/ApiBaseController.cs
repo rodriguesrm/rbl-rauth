@@ -47,7 +47,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         /// Accept-Language passed in the request header
         /// </summary>
         protected string AcceptLanguage
-            => Request?.Headers["Accept-Language"] ?? string.Empty;
+            => Request.Headers.AcceptLanguage.ToString();
 
         /// <summary>
         /// Convert a dictionary into a NotificationResponse list
@@ -139,7 +139,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         protected IEnumerable<Notification> GetModelErrors(ModelStateDictionary modelState)
         {
 
-            IList<Notification> result = new List<Notification>();
+            List<Notification> result = [];
 
             foreach (var item in modelState)
             {
@@ -161,7 +161,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         protected IEnumerable<Notification> GetNotificationsErrors(IReadOnlyCollection<Notification> notifications)
         {
 
-            IList<Notification> result = new List<Notification>();
+            List<Notification> result = [];
 
             foreach (Notification n in notifications)
             {

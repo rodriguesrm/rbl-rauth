@@ -27,7 +27,7 @@ namespace RBlazeLabs.Architecture.Web.Extensions
             configuration.GetSection("Jwt").Bind(jwtOptions);
 
             byte[] jwtHash = Encoding.ASCII.GetBytes(jwtOptions.Hash);
-            SymmetricSecurityKey signingKey = new SymmetricSecurityKey(jwtHash);
+            SymmetricSecurityKey signingKey = new(jwtHash);
 
             services.Configure<JwtTokenConfig>(o =>
             {
@@ -65,13 +65,11 @@ namespace RBlazeLabs.Architecture.Web.Extensions
 
                 });
 
-            services.AddAuthorization(auth =>
-            {
-                auth.AddPolicy(JwtBearerDefaults.AuthenticationScheme, new AuthorizationPolicyBuilder()
-                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
-                    .RequireAuthenticatedUser()
-                    .Build());
-            });
+            services.AddAuthorizationBuilder()
+                .AddPolicy(JwtBearerDefaults.AuthenticationScheme, new AuthorizationPolicyBuilder()
+                .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                .RequireAuthenticatedUser()
+                .Build());
 
             return services;
 

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using RBlazeLabs.Common.Notifications;
+using RBlazeLabs.Architecture.Web.Models.Responses;
 
 namespace RBlazeLabs.Architecture.Web.Filters
 {
@@ -17,19 +17,24 @@ namespace RBlazeLabs.Architecture.Web.Filters
         ///<inheritdoc/>
         public void OnActionExecuting(ActionExecutingContext ctx)
         {
-            //TODO: Review
             if (!ctx.ModelState.IsValid)
             {
 
-                IEnumerable<Notification> messages = ctx.ModelState
-                    .Where(x => x.Value?.Errors.Count > 0)
-                    .ToDictionary
-                    (
-                        k => k.Key,
-                        v => v.Value?.Errors.Select(e => e.ErrorMessage).ToArray()
+                var errors = ctx
+                    .ModelState
+                    .Where(x => x.Value is not null && x.Value?.Errors.Count != 0);
+
+                IEnumerable<ResponseNotification> messages = errors
+                    .Select(x => 
+                        new ResponseNotification
+                        (
+                            x.Key, 
+                            x.Value?.Errors
+                                .Select(e => e.ErrorMessage).ToArray()
+                        )
                     )
-                    .Select(itm => new Notification(itm.Key, string.Join('|', itm.Value)))
-                    .ToList();
+                    .ToList()
+                    .Where(e => e.Message.Length != 0);
 
                 BadRequestObjectResult result = new(messages);
                 ctx.Result = result;

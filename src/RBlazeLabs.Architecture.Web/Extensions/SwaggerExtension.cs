@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using Asp.Versioning.ApiExplorer;
 using Microsoft.OpenApi.Models;
 using RBlazeLabs.Architecture.Web.Filters;
 using RBlazeLabs.Architecture.Web.Options;
@@ -19,7 +19,11 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// <param name="services">Service collection object instance</param>
         /// <param name="configuration">Configuration object instance</param>
         /// <param name="assemblyName">API application assembly name</param>
-        public static IServiceCollection AddSwaggerGenerator(this IServiceCollection services, IConfiguration configuration, string assemblyName)
+        public static IServiceCollection AddSwaggerGenerator
+        (
+            this IServiceCollection services, 
+            IConfiguration configuration, string assemblyName
+        )
         {
             string[] versions = ["1.0"];
             return services.AddSwaggerGenerator(configuration, assemblyName, true, versions);
@@ -32,7 +36,13 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// <param name="configuration">Configuration object instance</param>
         /// <param name="assemblyName">API application assembly name</param>
         /// <param name="useAppKeyScope">Indicates if the application is outside the RSoft ecosystem.</param>
-        public static IServiceCollection AddSwaggerGenerator(this IServiceCollection services, IConfiguration configuration, string assemblyName, bool useAppKeyScope)
+        public static IServiceCollection AddSwaggerGenerator
+        (
+            this IServiceCollection services, 
+            IConfiguration configuration, 
+            string assemblyName, 
+            bool useAppKeyScope
+        )
         {
             string[] versions = ["1.0"];
             return services.AddSwaggerGenerator(configuration, assemblyName, useAppKeyScope, versions);
@@ -46,26 +56,43 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// <param name="assemblyName">API application assembly name</param>
         /// <param name="useAppKeyScope">Indicates if the application is outside the RSoft ecosystem.</param>
         /// <param name="versions">Array list API versions</param>
-        public static IServiceCollection AddSwaggerGenerator(this IServiceCollection services, IConfiguration configuration, string assemblyName, bool useAppKeyScope, params string[] versions)
+        public static IServiceCollection AddSwaggerGenerator
+        (
+            this IServiceCollection services, 
+            IConfiguration configuration, 
+            string assemblyName, 
+            bool useAppKeyScope, 
+            params string[] versions
+        )
         {
 
             bool isProd = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Production;
 
             services.Configure<SwaggerOptions>(options => configuration.GetSection("Swagger").Bind(options));
 
-            SwaggerOptions swaggerOptions = new SwaggerOptions();
+            SwaggerOptions swaggerOptions = new();
             configuration.GetSection("Swagger").Bind(swaggerOptions);
 
-            swaggerOptions.Title = !string.IsNullOrWhiteSpace(swaggerOptions.Title) ? swaggerOptions.Title : "API Title (see documentation)";
-            swaggerOptions.Description = !string.IsNullOrWhiteSpace(swaggerOptions.Description) ? swaggerOptions.Description : "API Description (see documentation)";
-            swaggerOptions.Contact = !string.IsNullOrWhiteSpace(swaggerOptions.Contact) ? swaggerOptions.Contact : "API Contact (see documentation)";
-            swaggerOptions.Uri = !string.IsNullOrWhiteSpace(swaggerOptions.Uri) ? swaggerOptions.Uri : "http://api.uri.see.documentation";
+            swaggerOptions.Title = !string.IsNullOrWhiteSpace(swaggerOptions.Title) 
+                ? swaggerOptions.Title 
+                : "API Title (see documentation)";
+            swaggerOptions.Description = !string.IsNullOrWhiteSpace(swaggerOptions.Description) 
+                ? swaggerOptions.Description 
+                : "API Description (see documentation)";
+            swaggerOptions.Contact = !string.IsNullOrWhiteSpace(swaggerOptions.Contact) 
+                ? swaggerOptions.Contact 
+                : "API Contact (see documentation)";
+            swaggerOptions.Uri = !string.IsNullOrWhiteSpace(swaggerOptions.Uri) 
+                ? swaggerOptions.Uri 
+                : "http://api.uri.see.documentation";
 
-            services.AddVersionedApiExplorer(p =>
-            {
-                p.GroupNameFormat = @"'v'VVVV";
-                p.SubstituteApiVersionInUrl = false;
-            });
+            //TODO: Review
+            //services.AddVersionedApiExplorer(p =>
+            //{
+            //    p.GroupNameFormat = @"'v'VVVV";
+            //    p.SubstituteApiVersionInUrl = false;
+            //});
+
             services.AddSwaggerGen(c =>
             {
 
@@ -146,7 +173,11 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// </summary>
         /// <param name="app">IApplicationBuilder object instance</param>
         /// <param name="provider">IApiVersionDescriptionProvider object instance</param>
-        public static IApplicationBuilder UseSwaggerDocUI(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
+        public static IApplicationBuilder UseSwaggerDocUI
+        (
+            this IApplicationBuilder app, 
+            IApiVersionDescriptionProvider provider
+        )
         {
 
             bool isProd = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Production;

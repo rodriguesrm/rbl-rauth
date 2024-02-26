@@ -1,14 +1,16 @@
-﻿namespace RBlazeLabs.Common.Notifications
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace RBlazeLabs.Architecture.Web.Models.Responses
 {
 
     /// <summary>
-    /// Notification template class
+    /// Response notification model
     /// </summary>
     /// <param name="key">Notification property key</param>
     /// <param name="message">Notification message content</param>
-    public class Notification(string key, string message)
+    [ExcludeFromCodeCoverage]
+    public class ResponseNotification(string key, string[]? message)
     {
-
 
         /// <summary>
         /// Notification property key
@@ -18,8 +20,7 @@
         /// <summary>
         /// Notification message content
         /// </summary>
-        public string Message { get; private set; } = message;
+        public string[] Message { get; private set; } = message ?? [];
 
     }
-
 }

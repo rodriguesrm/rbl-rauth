@@ -32,16 +32,17 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// Determine provider culture result in http context
         /// </summary>
         /// <param name="httpContext">Http context object instance</param>
+#pragma warning disable CS8609 // Nullability of reference types in return type doesn't match overridden member.
         public override Task<ProviderCultureResult> DetermineProviderCultureResult(HttpContext httpContext)
+#pragma warning restore CS8609 // Nullability of reference types in return type doesn't match overridden member.
         {
 
-            if (httpContext == null)
-                throw new ArgumentNullException(nameof(httpContext));
+            ArgumentNullException.ThrowIfNull(httpContext, nameof(httpContext));
 
             string uiCulture;
-            string culture = uiCulture = 
-                !string.IsNullOrWhiteSpace(httpContext.Request.Headers["Accept-Language"]) 
-                ? httpContext.Request.Headers["Accept-Language"].ToString() 
+            string culture = uiCulture =
+                !string.IsNullOrWhiteSpace(httpContext.Request.Headers.AcceptLanguage)
+                ? httpContext.Request.Headers.AcceptLanguage.ToString()
                 : DefaultRequestCulture;
 
             if (!SupportedCultures.Contains(culture))
