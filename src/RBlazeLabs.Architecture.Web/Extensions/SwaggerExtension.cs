@@ -35,7 +35,7 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// <param name="services">Service collection object instance</param>
         /// <param name="configuration">Configuration object instance</param>
         /// <param name="assemblyName">API application assembly name</param>
-        /// <param name="useAppKeyScope">Indicates if the application is outside the RSoft ecosystem.</param>
+        /// <param name="useAppKeyScope">Indicates if the application is outside the RBlazeLabs ecosystem.</param>
         public static IServiceCollection AddSwaggerGenerator
         (
             this IServiceCollection services, 
@@ -54,7 +54,7 @@ namespace RBlazeLabs.Architecture.Web.Extensions
         /// <param name="services">Service collection object instance</param>
         /// <param name="configuration">Configuration object instance</param>
         /// <param name="assemblyName">API application assembly name</param>
-        /// <param name="useAppKeyScope">Indicates if the application is outside the RSoft ecosystem.</param>
+        /// <param name="useAppKeyScope">Indicates if the application is outside the RBlazeLabs ecosystem.</param>
         /// <param name="versions">Array list API versions</param>
         public static IServiceCollection AddSwaggerGenerator
         (

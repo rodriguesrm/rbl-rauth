@@ -121,7 +121,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         protected async Task<IActionResult> RunGetAsync(int key, CancellationToken cancellationToken = default)
         {
             TDto dto = await GetByIdAsync(key, cancellationToken);
-            if (dto == null)
+            if (dto is null)
                 return NotFound(ServiceActivator.GetStringInLocalizer<SharedLanguageResource>(
                     "DATA_NOT_FOUND", "Data not found"));
             TResponse resp = Map(dto);
@@ -136,7 +136,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         protected async Task<IActionResult> RunListAsync(CancellationToken cancellationToken = default)
         {
             IEnumerable<TDto> result = await GetAllAsync(cancellationToken);
-            if (result == null)
+            if (result is null)
                 return NoContent();
             IEnumerable<TResponse> resp = Map(result);
             return Ok(resp);
@@ -153,7 +153,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         {
 
             TDto dto = await GetByIdAsync(key, cancellationToken);
-            if (dto == null)
+            if (dto is null)
                 return NotFound(ServiceActivator.GetStringInLocalizer<SharedLanguageResource>("DATA_NOT_FOUND", "Data not found"));
 
             dto = Map(request);
@@ -179,7 +179,7 @@ namespace RBlazeLabs.Architecture.Web.Api
         protected async Task<IActionResult> RunDeleteAsync(int key, CancellationToken cancellationToken = default)
         {
             TDto dto = await GetByIdAsync(key, cancellationToken);
-            if (dto == null)
+            if (dto is null)
                 return NotFound(ServiceActivator.GetStringInLocalizer<SharedLanguageResource>("DATA_NOT_FOUND", "Data not found"));
             await RemoveAsync(key, cancellationToken);
             return NoContent();
